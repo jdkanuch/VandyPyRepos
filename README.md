@@ -33,11 +33,11 @@ The app is [deployed to Google Cloud](http://victr-assessment-jkanuch.appspot.co
 It was developed using a SQLite3 database.
 
 ## Installation to run locally
-_This assumes you have a Python 3 development environment._
+_This assumes you have Python 3 installed and know how to setup a Python development environment using virtualenv._
 
-_If not, see [this](https://cloud.google.com/python/setup) tutorial for setting this up_ 
+_If not, see [this](https://cloud.google.com/python/setup) tutorial for setting one up._ 
 
-1. Clone the application. Change directory to VandyPyRepos and set up a virtualenv.
+1. Clone this repository. Change the directory to VandyPyRepos and setup and activate a virtualenv.
 2. Run pip to install the project dependencies:
 ```
 $ pip install -r requirements.txt
@@ -46,7 +46,7 @@ $ pip install -r requirements.txt
 ```
 $ export FLASK_APP=pygit_agg.py
 ```
-3. Run the following command to run the flask application locally:
+3. Run the following command to run the Flask application server locally:
 ```
 $ flask run
 ```
