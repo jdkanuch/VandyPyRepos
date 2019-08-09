@@ -29,4 +29,21 @@ VICTR Candidate Assessment. A basic Flask application using SQLAlchemy and the G
 
 ## Deployment
 
-The app is deployed to Google Cloud. It was developed using a SQLite3 database. 
+The app is deployed to Google Cloud. It was developed using a SQLite3 database.
+
+## Installation to run locally
+_This assumes you have a Python 3 development environment. If not, see this tutorial for setting this up: https://cloud.google.com/python/setup_
+
+1. Clone the application. Change directory to VandyPyRepos and set up a virtualenv.
+2. Run:
+```
+$ pip install -r requirements.txt
+```
+2. Run the following command to set the application environment variable:
+```
+$ export FLASK_APP=pygit_agg.py
+```
+3. Run the following command to run the application locally:
+```
+$ flask run
+```
