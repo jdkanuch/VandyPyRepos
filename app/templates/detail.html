@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="card w-100 mt-4" style="width: 18rem;">
+      <div class="card-body">
+          <a href="{{ url_for('home') }}" class="btn btn-link link-gray">&lt;Back</a>
+          <div class="row border-bottom">
+              <div class="col-10">
+                   <h3 class="card-title"><a href="{{ repo.url }}" target="_blank">{{ repo.name }}</a></h3>
+              </div>
+              <div class="col-2 text-muted text-right">
+                  <span class="fa fa-star-o"></span>
+                  {{ repo.star_count }}
+              </div>
+          </div>
+
+          <p class="card-text mb-2 mt-2"> {{ repo.description }}</p>
+          <p class="text-muted">
+              <small>
+                 GitHub repo ID: {{ repo.id }}
+              </small>
+              <br />
+              <small>
+                 URL: <a href="{{ repo.url }}" target="_blank" class="link-gray">{{ repo.url }}</a>
+              </small>
+          </p>
+
+          <small class="card-text mb-2 text-muted"> Created:
+              <span class="date-formatted">{{ repo.created_date }}</span>
+          </small>
+          <br />
+          <small class="card-text mb-2 text-muted"> Last Push:
+            <span class="date-formatted">{{ repo.last_push_date }}</span>
+          </small>
+      </div>
+    </div>
+{% endblock content %}

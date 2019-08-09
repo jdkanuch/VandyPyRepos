@@ -1,0 +1,9 @@
+a.link-gray {
+    color: lightSlateGray;
+    text-decoration: none;
+}
+
+a.link-gray:hover {
+    color: darkSlateGray;
+    text-decoration: none;
+}

@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+    <h3 class="mb-4 mt-4">Top 5 GitHub Python Repositories</h3>
+    <a href="{{ url_for('refresh') }}" class="btn btn-primary">Refresh List</a>
+    <small class="text-muted pl-3">Last refreshed: {{ session.messages }}</small>
+    {% for repo in repos %}
+    <div class="card w-100 mt-4" style="width: 18rem;">
+      <div class="card-body">
+          <div class="row">
+              <div class="col-10">
+                   <h5 class="card-title"><a href="{{ repo.url }}" target="_blank">{{ repo.name }}</a></h5>
+              </div>
+              <div class="col-2 text-muted text-right">
+                  <span class="fa fa-star-o"></span>
+                  {{ repo.star_count }}
+              </div>
+          </div>
+
+          <p class="card-subtitle mb-2 text-muted"> {{ repo.description }}</p>
+          <div class="text-right pt-3">
+              <a href="{{ url_for('detail', repo_id=repo.id) }}" class="btn btn-secondary">View Details</a>
+          </div>
+      </div>
+    </div>
+    {% endfor %}
+
+{% endblock content %}
